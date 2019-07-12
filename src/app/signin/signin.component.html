@@ -1,0 +1,15 @@
+<!--<p>signin works!</p>-->
+
+<div class="container">
+    <form [formGroup]="SigninForm" (ngSubmit)="signIn(SigninForm)">
+        <div class="form-group">
+            <label>Enter username or email or password to signin</label>
+            <input type="text"
+            class="form-control"
+            formControlName="signinvalue">
+        </div>
+        <div class="form-group">
+            <button type="submit"[deisabled]="!SigninForm.valid">Signin</button>
+        </div>
+    </form>
+</div>
